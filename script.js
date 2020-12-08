@@ -5,7 +5,7 @@ const fetchData = async () => {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data[0]);
-    for(let i = 0; i < 10; i++) {
+    for(let i = 0; i < 12; i++) {
         let div = document.createElement('div');
         div.innerHTML = `
             <h2>Character: ${data[i].name}</h2>
@@ -17,12 +17,6 @@ const fetchData = async () => {
         div.classList.add('card');
         container.appendChild(div);
     }
-    // displayData(data);
 }
-
-// const displayData = (chars) => {
-//     console.log(chars);
-    
-// }
 
 window.addEventListener('load', fetchData);
